@@ -7,9 +7,8 @@ ifeq ($(DEBUG),y)
 else
   DEBFLAGS = -O2
 endif
-
-LDDINCDIR=$(PWD)/../include
 EXTRA_CFLAGS  += $(DEBFLAGS) -I$(LDDINCDIR)
+
 
 ifneq ($(KERNELRELEASE),)
 # call from kernel build system
@@ -22,7 +21,7 @@ KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD       := $(shell pwd)
 
 default:
-	$(MAKE) -C $(KERNELDIR) SUBDIRS=$(PWD) modules
+	$(MAKE) -C $(KERNELDIR) SUBDIRS=$(PWD) LDDINCDIR=$(PWD)/../include modules
 
 endif
 

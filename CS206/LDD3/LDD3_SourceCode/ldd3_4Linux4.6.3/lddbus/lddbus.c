@@ -57,7 +57,7 @@ static void ldd_bus_release(struct device *dev)
 }
 	
 struct device ldd_bus = {
-	.init_name = "ldd0",
+	.init_name   = "ldd0",
 	.release  = ldd_bus_release
 };
 
