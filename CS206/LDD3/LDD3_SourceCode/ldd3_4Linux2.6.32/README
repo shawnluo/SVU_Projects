@@ -19,10 +19,8 @@ The example drivers should compile against latest Linus Torvalds kernel tree:
 
 To compile the drivers against a specific tree (for example Linus tree):
 
-$ git clone git://github.com/martinezjavier/ldd3.git
+$ git clone git://github.com/xxx/ldd3.git
 $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 $ export KERNELDIR=/path/to/linux
 $ cd ldd3
 $ make
-
-Bugs, comments or patches: martinez.javier@gmail.com
