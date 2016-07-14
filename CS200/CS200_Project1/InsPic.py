@@ -24,4 +24,5 @@ def InsPic():
 
     f.close()
 
+
 InsPic()
